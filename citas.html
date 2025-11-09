@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar Cita - El Barbero Elegante</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">El Barbero Elegante</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="citas.html">Reservar Cita</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="form-container">
+        <h2>Reserva tu Próxima Cita</h2>
+        <form id="cita-form" action="#" method="POST">
+            <label for="nombre">Nombre Completo <span class="required">*</span>:</label>
+            <input type="text" id="nombre" required title="El nombre es obligatorio">
+
+            <label for="email">Correo Electrónico <span class="required">*</span>:</label>
+            <input type="email" id="email" required title="Debe ser un correo electrónico válido">
+            <small id="email-error" class="error-message"></small>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" pattern="\d{10}" title="Debe ser un número de 10 dígitos">
+
+            <label for="servicio">Servicio:</label>
+            <select id="servicio">
+                <option value="corte">Corte Clásico</option>
+                <option value="barba">Arreglo de Barba</option>
+                <option value="afeitado">Afeitado Tradicional</option>
+            </select>
+
+            <label for="fecha">Fecha y Hora <span class="required">*</span>:</label>
+            <input type="datetime-local" id="fecha" required>
+
+            <label for="edad">Edad (Mín. 18) <span class="required">*</span>:</label>
+            <input type="number" id="edad" required min="18" title="La edad debe ser un número y mayor de 18">
+            <small id="edad-error" class="error-message"></small>
+
+            <button type="submit">Confirmar Reserva</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 El Barbero Elegante. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
